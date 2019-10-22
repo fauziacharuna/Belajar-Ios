@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D28B84023594CD6008DFAD7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D28B83F23594CD6008DFAD7 /* Contact.swift */; };
+		2D28B84223594D13008DFAD7 /* ContactApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D28B84123594D13008DFAD7 /* ContactApi.swift */; };
 		2DB10DCE235449E20010A92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB10DCD235449E20010A92E /* AppDelegate.swift */; };
 		2DB10DD0235449E20010A92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB10DCF235449E20010A92E /* ViewController.swift */; };
 		2DB10DD3235449E20010A92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB10DD1235449E20010A92E /* Main.storyboard */; };
@@ -14,6 +16,12 @@
 		2DB10DD8235449E30010A92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB10DD6235449E30010A92E /* LaunchScreen.storyboard */; };
 		2DB10DE3235449E30010A92E /* Belajar_IosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB10DE2235449E30010A92E /* Belajar_IosTests.swift */; };
 		2DB10DEE235449E40010A92E /* Belajar_IosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB10DED235449E40010A92E /* Belajar_IosUITests.swift */; };
+		2DB10DFC23544BCB0010A92E /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB10DFB23544BCB0010A92E /* MainController.xib */; };
+		2DB10DFE23544CFB0010A92E /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB10DFD23544CFB0010A92E /* MainController.swift */; };
+		2DDE715923559BF700216B0D /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE715723559BF700216B0D /* ContactTableViewController.swift */; };
+		2DDE715A23559BF700216B0D /* ContactTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDE715823559BF700216B0D /* ContactTableViewController.xib */; };
+		2DDE715F2355CB4600216B0D /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE715D2355CB4600216B0D /* ContactCell.swift */; };
+		2DDE71602355CB4600216B0D /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDE715E2355CB4600216B0D /* ContactCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D28B83F23594CD6008DFAD7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		2D28B84123594D13008DFAD7 /* ContactApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactApi.swift; sourceTree = "<group>"; };
 		2DB10DCA235449E20010A92E /* Belajar Ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Belajar Ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB10DCD235449E20010A92E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB10DCF235449E20010A92E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		2DB10DE9235449E40010A92E /* Belajar IosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Belajar IosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB10DED235449E40010A92E /* Belajar_IosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Belajar_IosUITests.swift; sourceTree = "<group>"; };
 		2DB10DEF235449E40010A92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB10DFB23544BCB0010A92E /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		2DB10DFD23544CFB0010A92E /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		2DDE715723559BF700216B0D /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ../ContactTableViewController.swift; sourceTree = "<group>"; };
+		2DDE715823559BF700216B0D /* ContactTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewController.xib; sourceTree = "<group>"; };
+		2DDE715D2355CB4600216B0D /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		2DDE715E2355CB4600216B0D /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +113,17 @@
 		2DB10DCC235449E20010A92E /* Belajar Ios */ = {
 			isa = PBXGroup;
 			children = (
+				2D28B83F23594CD6008DFAD7 /* Contact.swift */,
+				2D28B84123594D13008DFAD7 /* ContactApi.swift */,
+				2DDE715723559BF700216B0D /* ContactTableViewController.swift */,
+				2DDE715D2355CB4600216B0D /* ContactCell.swift */,
+				2DDE715E2355CB4600216B0D /* ContactCell.xib */,
+				2DDE715823559BF700216B0D /* ContactTableViewController.xib */,
 				2DB10DCD235449E20010A92E /* AppDelegate.swift */,
 				2DB10DCF235449E20010A92E /* ViewController.swift */,
+				2DB10DFB23544BCB0010A92E /* MainController.xib */,
 				2DB10DD1235449E20010A92E /* Main.storyboard */,
+				2DB10DFD23544CFB0010A92E /* MainController.swift */,
 				2DB10DD4235449E30010A92E /* Assets.xcassets */,
 				2DB10DD6235449E30010A92E /* LaunchScreen.storyboard */,
 				2DB10DD9235449E30010A92E /* Info.plist */,
@@ -193,13 +217,16 @@
 				TargetAttributes = {
 					2DB10DC9235449E20010A92E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 					2DB10DDD235449E30010A92E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 2DB10DC9235449E20010A92E;
 					};
 					2DB10DE8235449E40010A92E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 2DB10DC9235449E20010A92E;
 					};
 				};
@@ -229,8 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDE71602355CB4600216B0D /* ContactCell.xib in Resources */,
 				2DB10DD8235449E30010A92E /* LaunchScreen.storyboard in Resources */,
 				2DB10DD5235449E30010A92E /* Assets.xcassets in Resources */,
+				2DDE715A23559BF700216B0D /* ContactTableViewController.xib in Resources */,
+				2DB10DFC23544BCB0010A92E /* MainController.xib in Resources */,
 				2DB10DD3235449E20010A92E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D28B84023594CD6008DFAD7 /* Contact.swift in Sources */,
+				2DDE715F2355CB4600216B0D /* ContactCell.swift in Sources */,
+				2DDE715923559BF700216B0D /* ContactTableViewController.swift in Sources */,
 				2DB10DD0235449E20010A92E /* ViewController.swift in Sources */,
+				2DB10DFE23544CFB0010A92E /* MainController.swift in Sources */,
 				2DB10DCE235449E20010A92E /* AppDelegate.swift in Sources */,
+				2D28B84223594D13008DFAD7 /* ContactApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-Ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-Ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -476,7 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-IosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belajar Ios.app/Belajar Ios";
 			};
@@ -496,7 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-IosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belajar Ios.app/Belajar Ios";
 			};
@@ -515,7 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-IosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Belajar Ios";
 			};
@@ -534,7 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fauziharunadev.Belajar-IosUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Belajar Ios";
 			};

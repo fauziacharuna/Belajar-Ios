@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController" customModule="Belajar_Ios" customModuleProvider="target">
+            <connections>
+                <outlet property="minusButton" destination="EbV-TS-rLC" id="IFS-zt-0LN"/>
+                <outlet property="numberLabel" destination="QmU-Jb-rbj" id="Fth-4Q-Zb6"/>
+                <outlet property="plusButton" destination="G7U-dr-NNA" id="bQi-Wu-iCF"/>
+                <outlet property="view" destination="eij-YY-TWk" id="Awq-M7-4DH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eij-YY-TWk">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNB-Yj-jTx">
+                    <rect key="frame" x="169" y="361" width="34" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="Wdt-uj-gyE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-TS-rLC">
+                    <rect key="frame" x="229" y="337" width="95" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="9TO-jo-Sh1"/>
+                    </constraints>
+                    <state key="normal" title="-"/>
+                    <connections>
+                        <action selector="subtractFunction:" destination="-1" eventType="touchUpInside" id="zVd-jE-ufc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmU-Jb-rbj">
+                    <rect key="frame" x="193" y="326" width="28" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                    <color key="textColor" red="0.27865014916063291" green="0.68544326361379726" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7U-dr-NNA">
+                    <rect key="frame" x="92" y="337" width="46" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="KJm-xi-6BI"/>
+                    </constraints>
+                    <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="addFunction:" destination="-1" eventType="touchUpInside" id="jWo-sE-d84"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nG3-ol-C9a">
+                    <rect key="frame" x="63" y="792" width="287" height="30"/>
+                    <state key="normal" title="Contact"/>
+                    <connections>
+                        <action selector="nextContact:" destination="-1" eventType="touchUpInside" id="fks-YA-fwN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nG3-ol-C9a" secondAttribute="trailing" constant="64" id="59W-z8-zxm"/>
+                <constraint firstItem="G7U-dr-NNA" firstAttribute="leading" secondItem="CB2-Sa-amf" secondAttribute="leading" constant="92" id="EQA-MO-ZFp"/>
+                <constraint firstItem="CB2-Sa-amf" firstAttribute="trailing" secondItem="EbV-TS-rLC" secondAttribute="trailing" constant="90" id="KC8-SZ-xrf"/>
+                <constraint firstItem="nG3-ol-C9a" firstAttribute="leading" secondItem="CB2-Sa-amf" secondAttribute="leading" constant="63" id="L0N-zu-7EF"/>
+                <constraint firstItem="QmU-Jb-rbj" firstAttribute="centerX" secondItem="CB2-Sa-amf" secondAttribute="centerX" id="Lo0-uA-AAe"/>
+                <constraint firstItem="EbV-TS-rLC" firstAttribute="leading" secondItem="G7U-dr-NNA" secondAttribute="trailing" priority="250" constant="101" id="Tk4-1u-Bzu"/>
+                <constraint firstItem="CB2-Sa-amf" firstAttribute="bottom" secondItem="nG3-ol-C9a" secondAttribute="bottom" constant="40" id="XY1-Q3-xaD"/>
+                <constraint firstItem="EbV-TS-rLC" firstAttribute="top" secondItem="CB2-Sa-amf" secondAttribute="top" constant="293" id="ac9-Ud-Ng7"/>
+                <constraint firstItem="CB2-Sa-amf" firstAttribute="centerY" secondItem="QmU-Jb-rbj" secondAttribute="centerY" constant="100" id="dGn-aU-mpy"/>
+                <constraint firstItem="G7U-dr-NNA" firstAttribute="top" secondItem="CB2-Sa-amf" secondAttribute="top" constant="293" id="q7Q-r7-qKh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="CB2-Sa-amf"/>
+            <point key="canvasLocation" x="-68" y="-383.65817091454278"/>
+        </view>
+    </objects>
+</document>
