@@ -21,7 +21,8 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
 
     var langguage: [String] = ["steve", "Swift", "Python", "Ruby", "Golang", "JavaScript", "Objective-C", "Objective-C"]
     var status: [String] = ["admin", "user"]
-    var contacts: [Contact] = []
+//    var contacts: [Contact] = []
+    var contactGroup = [String: Contact]()
 
     let colors = [UIColor.blue, UIColor.yellow, UIColor.magenta, UIColor.red, UIColor.brown, UIColor.brown, UIColor.brown, UIColor.brown, UIColor.white]
     
@@ -30,9 +31,18 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
     /// - Parameter section: <#section description#>
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return contacts.count
+        return contactGroup.count
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Section"
+        label.backgroundColor = UIColor.lightGray
+        return label
+    }
     
     /// fungsi untuk layout manager untuk inflating cell ke dalam tableview
     /// - Parameter tableView: <#tableView description#>
@@ -82,21 +92,21 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         //section A
-        //        var contacts: [Contact] = []
+        var contacts: [Contact] = []
         contacts.append(Contact(name: "Steve Jobs Steve Jobs Steve Jobs Steve Jobs Steve Jobs Steve Jobs Steve Jobs", role: "admin"))
         contacts.append(Contact(name: "Jobs", role: "user"))
         contacts.append(Contact(name: "Bill", role: "admin"))
         contacts.append(Contact(name: "Roger", role: "user"))
         contacts.append(Contact(name: "Anne", role: "user"))
-        //    contactGroup["Section A"] = contacts
+        contactGroup["Section A"] = contacts
         //section B
-        //        var contacts2: [Contact] = []
-        contacts.append(Contact(name: "Steve", role: "admin"))
-        contacts.append(Contact(name: "Jobs", role: "user"))
-        contacts.append(Contact(name: "Bill", role: "admin"))
-        contacts.append(Contact(name: "Roger", role: "user"))
-        contacts.append(Contact(name: "Anne", role: "user"))
-        //        contactGroup["Section B"] = contacts2
+        var contacts2: [Contact] = []
+        contacts2.append(Contact(name: "Steve", role: "admin"))
+        contacts2.append(Contact(name: "Jobs", role: "user"))
+        contacts2.append(Contact(name: "Bill", role: "admin"))
+        contacts2.append(Contact(name: "Roger", role: "user"))
+        contacts2.append(Contact(name: "Anne", role: "user"))
+        contactGroup["Section B"] = contacts2
         //dictionary
 
 
