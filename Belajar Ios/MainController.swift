@@ -26,10 +26,12 @@ class MainController : UIViewController {
     }
     override func viewDidLoad() {
         
+        
     }
     
     @IBAction func nextContact(_ sender: Any) {
         let contactController = ContactTableViewController(nibName: "ContactTableViewController", bundle: nil)
+     
         self.navigationController?.pushViewController(contactController, animated: true)
         
     }

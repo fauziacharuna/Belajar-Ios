@@ -9,8 +9,8 @@
 import Foundation
 struct ContactGroup {
     var section: String
-    var items : [[String:Any]]
-    init(section: String, items: [[String:Any]]) {
+    var items : [ContactModel]
+    init(section: String, items: [ContactModel]) {
         self.section = section
         self.items = items
     }

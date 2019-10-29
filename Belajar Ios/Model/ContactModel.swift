@@ -7,3 +7,11 @@
 //
 
 import Foundation
+struct ContactModel {
+    var name: String?
+    var role: String?
+    init(name: String, role: String){
+        self.name = name
+        self.role = role
+    }
+}

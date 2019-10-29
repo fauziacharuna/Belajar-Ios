@@ -8,10 +8,29 @@
 
 import UIKit
 
-class ContactsTable: UIViewController {
+class ContactsTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
+        @IBOutlet weak var tableView: UITableView!
+        let cellCustom = "cellCustom"
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ContactCell = self.tableView.dequeueReusableCell(withIdentifier: cellCustom, for: indexPath) as! ContactCell
+        return cell
+            
+    }
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Contacts"
+         tableView.delegate = self
+         tableView.dataSource = self
+         tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: cellCustom)
 
         // Do any additional setup after loading the view.
     }
