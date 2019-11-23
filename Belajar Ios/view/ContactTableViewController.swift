@@ -20,6 +20,7 @@ class ContactTableViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        setupNavigation()
         
         self.title = "Contacts"
     }
@@ -28,6 +29,18 @@ class ContactTableViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: cellCustom)
+    }
+    
+    private func setupNavigation() {
+        // tambah tombol di navigasi kanan
+        let navItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addContactDidTap))
+        navigationItem.rightBarButtonItem = navItem
+    }
+    
+    @objc
+    func addContactDidTap() {
+        let controller = CreateContactViewController(nibName: "CreateContactViewController", bundle: nil)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

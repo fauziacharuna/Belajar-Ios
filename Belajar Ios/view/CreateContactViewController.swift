@@ -33,8 +33,12 @@ class CreateContactViewController: UIViewController {
         let contact = ContactModel(name: name, role: role)  // instantiate contact
         // delegasikan contact ke controller(yg implement protocol CreateContactDelegate) yg sudah di assign ke variable delegate
         delegate?.onContactCreated(contact: contact)
-        // job selesai, dismiss controller
-        dismiss(animated: true)
+        // job selesai, dismiss controller, kalau dalam navigationController pop
+        if navigationController != nil {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
     }
     
     private func alert(what text: String) {
