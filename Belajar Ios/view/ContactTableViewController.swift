@@ -13,28 +13,18 @@ class ContactTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let sectionHeaderHeight: CGFloat = 25
-    let cellReuseIdentifier = "cell"
     let cellCustom = "customCell"
     var contacts: [ContactGroup] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //section A
-        var contact1: [ContactModel] = []
-        contact1.append(ContactModel(name: "Achmad", role: "user"))
-        contact1.append(ContactModel(name: "Achmad", role: "admin"))
-        contact1.append(ContactModel(name: "Amin", role: "user"))
-        let g1 = ContactGroup(section: "sectionA", items: contact1)
-        contacts.append(g1)
         
-        var contact2: [ContactModel] = []
-        contact2.append(ContactModel(name: "Haruna", role: "user"))
-        contact2.append(ContactModel(name: "Haruna", role: "admin"))
-        contact2.append(ContactModel(name: "Haruna", role: "user"))
-        let g2 = ContactGroup(section: "SectionB", items: contact2)
-        contacts.append(g2)
+        setupTableView()
         
         self.title = "Contacts"
+    }
+    
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: cellCustom)
