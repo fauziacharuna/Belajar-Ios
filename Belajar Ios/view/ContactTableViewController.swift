@@ -15,7 +15,6 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
     let sectionHeaderHeight: CGFloat = 25
     let cellReuseIdentifier = "cell"
     let cellCustom = "customCell"
-//    var contacts = [ContactGroup]()
     var contacts: [ContactGroup] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,18 +84,6 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
         contact2.append(ContactModel(name: "Haruna", role: "user"))
         let g2 = ContactGroup(section: "SectionB", items: contact2)
         contacts.append(g2)
-
-
-
-
-//        let itemsA = [["name" : "Fauzi","role": "admin"],["name" : "Fauzi","role": "user"],["name" : "Fauzi","role": "user"]]
-//        let itemsB = [["name" : "Achmad","role": "user"],["name" : "Achmad","role": "user"],["name" : "Achmad","role": "user"]]
-//        let itemsC = [["name" : "Haruna","role": "user"],["name" : "Haruna","role": "user"],["name" : "Achmad","role": "user"]]
-        
-//        contacts = [ContactGroup(section:"A", items: itemsA),
-//                    ContactGroup(section: "B", items: itemsB),
-//                    ContactGroup(section: "C", items: itemsC)]
-        
 
         self.title = "Contacts"
         tableView.delegate = self
