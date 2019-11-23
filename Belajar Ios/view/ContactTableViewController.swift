@@ -40,6 +40,7 @@ class ContactTableViewController: UIViewController {
     @objc
     func addContactDidTap() {
         let controller = CreateContactViewController(nibName: "CreateContactViewController", bundle: nil)
+        controller.delegate = self
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -47,7 +48,7 @@ class ContactTableViewController: UIViewController {
 /// manfaatin extension untuk enkapsulasi kode
 extension ContactTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return contacts[section].items.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,5 +81,34 @@ extension ContactTableViewController: UITableViewDataSource, UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+/// implement protocol Delegate
+extension ContactTableViewController: CreateContactDelegate {
+    func onContactCreated(contact: ContactModel) {
+        adaptData(contact)
+        tableView.reloadData()
+    }
+    
+    /// implement sort otomatis berdasarkan abjad
+    private func adaptData(_ data: ContactModel) {
+        guard let namePrefix = data.name?.first?.uppercased() else { return }
+        
+        print("adapting added data to list as sorted & grouped by prefix character")
+        var added = false
+        if !contacts.isEmpty {
+            for i in 0..<contacts.count where namePrefix == contacts[i].section {
+                contacts[i].items.append(data)
+                // sort item inside section
+                contacts[i].items.sort { ($0.name ?? "") < ($1.name ?? "") }
+                added = true
+            }
+        }
+        if !added {
+            contacts.append(ContactGroup(section: namePrefix, items: [data]))
+            // sort the section too
+            contacts.sort { ($0.section) < ($1.section) }
+        }
     }
 }
