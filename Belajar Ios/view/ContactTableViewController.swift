@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ContactTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ContactTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let sectionHeaderHeight: CGFloat = 25
@@ -33,13 +33,16 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
         contact2.append(ContactModel(name: "Haruna", role: "user"))
         let g2 = ContactGroup(section: "SectionB", items: contact2)
         contacts.append(g2)
-
+        
         self.title = "Contacts"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: cellCustom)
     }
-    
+}
+
+/// manfaatin extension untuk enkapsulasi kode
+extension ContactTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
@@ -68,18 +71,11 @@ class ContactTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tap cell \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("row at \(indexPath)")
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
-    }
-    
-    func addTapped(sender:UIBarButtonItem){
-        print("Add trigger")
-    }
-    
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
 }
