@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateContactViewController" customModule="Belajar_Ios" customModuleProvider="target">
+            <connections>
+                <outlet property="createBtn" destination="ry6-fn-7IB" id="HyN-T2-yEg"/>
+                <outlet property="nameField" destination="iyt-Zy-GWw" id="EXK-th-G7P"/>
+                <outlet property="roleField" destination="YG7-nD-Ags" id="ive-Wm-QSr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iyt-Zy-GWw">
+                    <rect key="frame" x="20" y="104" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Roles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-nD-Ags">
+                    <rect key="frame" x="20" y="176" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhh-6H-fRw">
+                    <rect key="frame" x="129.5" y="56" width="155" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-fn-7IB">
+                    <rect key="frame" x="184" y="270" width="46" height="30"/>
+                    <state key="normal" title="Create"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iyt-Zy-GWw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="1YE-3G-95a"/>
+                <constraint firstItem="YG7-nD-Ags" firstAttribute="top" secondItem="iyt-Zy-GWw" secondAttribute="bottom" constant="38" id="6ot-mR-xyd"/>
+                <constraint firstItem="uhh-6H-fRw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GEp-GN-fFO"/>
+                <constraint firstItem="YG7-nD-Ags" firstAttribute="trailing" secondItem="iyt-Zy-GWw" secondAttribute="trailing" id="LBM-jW-Jdf"/>
+                <constraint firstItem="iyt-Zy-GWw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VJ9-hr-PEo"/>
+                <constraint firstItem="ry6-fn-7IB" firstAttribute="centerX" secondItem="YG7-nD-Ags" secondAttribute="centerX" id="Y2X-nf-coD"/>
+                <constraint firstItem="uhh-6H-fRw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="cxj-TA-ovq"/>
+                <constraint firstItem="ry6-fn-7IB" firstAttribute="top" secondItem="YG7-nD-Ags" secondAttribute="bottom" constant="60" id="dV6-Ez-kuq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iyt-Zy-GWw" secondAttribute="trailing" constant="20" id="hhe-dY-Bye"/>
+                <constraint firstItem="YG7-nD-Ags" firstAttribute="leading" secondItem="iyt-Zy-GWw" secondAttribute="leading" id="s3s-R0-Wxh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>
